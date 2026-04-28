@@ -159,5 +159,64 @@ namespace DocuTrack.View
         }
 
         public void MostrarMensaje(string mensaje) => Console.WriteLine($"    {mensaje}");
+
+        public void MostrarMenu()
+        {
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("  ╔══════════════════════════════════════╗");
+            Console.WriteLine("  ║    DocuTrack — Menú Principal        ║");
+            Console.WriteLine("  ╠══════════════════════════════════════╣");
+            Console.WriteLine("  ║  1. Insertar documento / carpeta     ║");
+            Console.WriteLine("  ║  2. Listar todos (inorden)           ║");
+            Console.WriteLine("  ║  3. Buscar                           ║");
+            Console.WriteLine("  ║  4. Actualizar nombre                ║");
+            Console.WriteLine("  ║  5. Eliminar                         ║");
+            Console.WriteLine("  ║  6. Salir                            ║");
+            Console.WriteLine("  ╚══════════════════════════════════════╝");
+            Console.ResetColor();
+            Console.Write("  Seleccione una opción: ");
+        }
+
+        public int LeerOpcion()
+        {
+            int opcion;
+            while (!int.TryParse(Console.ReadLine(), out opcion))
+                Console.Write("  Entrada inválida. Intente de nuevo: ");
+            return opcion;
+        }
+
+        public string LeerTexto(string prompt)
+        {
+            string input;
+            Console.Write($"  {prompt}");
+            do
+            {
+                input = Console.ReadLine() ?? string.Empty;
+                if (string.IsNullOrWhiteSpace(input))
+                    Console.Write("  Entrada inválida. Intente de nuevo: ");
+            } while (string.IsNullOrWhiteSpace(input));
+            return input.Trim();
+        }
+
+        public bool LeerEsCarpeta()
+        {
+            Console.Write("  ¿Es carpeta? (s/n): ");
+            string resp = Console.ReadLine() ?? "n";
+            return resp.Trim().ToLower() == "s";
+        }
+
+        public void MostrarListaSimple(List<Nodo> nodos)
+        {
+            Console.WriteLine();
+            if (nodos.Count == 0)
+            {
+                Console.WriteLine("    (árbol vacío)");
+                return;
+            }
+            Console.WriteLine("    Elementos en el árbol (inorden):");
+            foreach (Nodo n in nodos)
+                Console.WriteLine($"      {n.Icono} {n.Nombre}");
+        }
     }
 }
