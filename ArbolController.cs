@@ -15,6 +15,66 @@ namespace DocuTrack.Controller
             _vista = new ArbolView();
         }
 
+        public void Iniciar()
+        {
+            _vista.MostrarBanner();
+            int opcion;
+            do
+            {
+                _vista.MostrarMenu();
+                opcion = _vista.LeerOpcion();
+                switch (opcion)
+                {
+                    case 1: InsertarInteractivo();   break;
+                    case 2: ListarInteractivo();     break;
+                    case 3: BuscarInteractivo();     break;
+                    case 4: ActualizarInteractivo(); break;
+                    case 5: EliminarInteractivo();   break;
+                    case 6: _vista.MostrarMensaje("Saliendo..."); break;
+                    default: _vista.MostrarMensaje("Opción inválida."); break;
+                }
+            } while (opcion != 6);
+            _vista.MostrarFin();
+        }
+
+        private void InsertarInteractivo()
+        {
+            string nombre    = _vista.LeerTexto("Nombre a insertar: ");
+            bool   esCarpeta = _vista.LeerEsCarpeta();
+            bool   ok        = _arbol.Insertar(nombre, esCarpeta, out int comp);
+            _vista.MostrarInsercion(nombre, ok, comp);
+            _vista.ImprimirArbol(_arbol.Raiz);
+        }
+
+        private void ListarInteractivo()
+        {
+            _vista.MostrarListaSimple(_arbol.Inorden());
+        }
+
+        private void BuscarInteractivo()
+        {
+            string nombre    = _vista.LeerTexto("Nombre a buscar: ");
+            Nodo?  resultado = _arbol.Buscar(nombre, out int comp);
+            _vista.MostrarResultadoBusqueda(nombre, resultado, comp);
+        }
+
+        private void ActualizarInteractivo()
+        {
+            string antiguo = _vista.LeerTexto("Nombre actual:  ");
+            string nuevo   = _vista.LeerTexto("Nuevo nombre:   ");
+            bool   ok      = _arbol.Actualizar(antiguo, nuevo, out string mensaje);
+            _vista.MostrarActualizacion(antiguo, nuevo, ok, mensaje);
+            if (ok) _vista.ImprimirArbol(_arbol.Raiz);
+        }
+
+        private void EliminarInteractivo()
+        {
+            string nombre = _vista.LeerTexto("Nombre a eliminar: ");
+            bool   ok     = _arbol.Eliminar(nombre, out string caso);
+            _vista.MostrarEliminacion(nombre, ok, caso);
+            if (ok) _vista.ImprimirArbol(_arbol.Raiz);
+        }
+
         public void Ejecutar()
         {
             _vista.MostrarBanner();

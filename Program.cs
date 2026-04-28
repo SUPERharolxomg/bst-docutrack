@@ -7,4 +7,4 @@ using DocuTrack.Controller;
 System.Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 var controller = new ArbolController();
-controller.Ejecutar();
+controller.Iniciar();
