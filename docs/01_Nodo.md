@@ -1,10 +1,10 @@
-# 📄 Nodo.cs — Explicación detallada
+# Nodo.cs — Explicación detallada
 
 ## ¿Qué es este archivo?
 
 Este archivo define **la pieza más pequeña del sistema**: el nodo. Un nodo representa una sola carpeta o un solo archivo dentro del árbol de DocuTrack. Por sí solo un nodo no hace nada; es solo un contenedor de datos. El árbol se construye conectando nodos entre sí.
 
-> ⚠️ Este archivo **no tiene ninguna línea de Console**. Solo define datos. Esa es la regla del Model en MVC.
+> Este archivo **no tiene ninguna línea de Console**. Solo define datos. Esa es la regla del Model en MVC.
 
 ---
 

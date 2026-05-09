@@ -1,10 +1,10 @@
-# 📄 Program.cs — Explicación detallada
+# Program.cs — Explicación detallada
 
 ## ¿Qué es este archivo?
 
 Es el **punto de arranque** de toda la aplicación. Cuando ejecutas `dotnet run`, lo primero que hace .NET es correr este archivo. Su trabajo es mínimo: preparar la consola y llamar al Controller para que haga todo lo demás.
 
-> ⚠️ **Regla del enunciado:** `Program.cs` solo puede invocar al Controller. No puede tener lógica de negocio, cálculos, ni `Console.Write` propios.
+> **Regla del enunciado:** `Program.cs` solo puede invocar al Controller. No puede tener lógica de negocio, cálculos, ni `Console.Write` propios.
 
 ---
 

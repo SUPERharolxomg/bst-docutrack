@@ -1,4 +1,4 @@
-#  DocuTrack BST
+# DocuTrack BST
 
 Sistema de gestión jerárquica de documentos implementado como 
 Árbol Binario de Búsqueda (BST) en C# bajo arquitectura MVC.
@@ -8,7 +8,7 @@ Universidad de Manizales · Facultad de Ciencias e Ingeniería
 
 ---
 
-##  Integrantes
+## Integrantes
 
 | Nombre | Responsabilidad |
 |--------|----------------|
@@ -23,7 +23,7 @@ Universidad de Manizales · Facultad de Ciencias e Ingeniería
 
 ---
 
-##  Cómo clonar y ejecutar
+## Cómo clonar y ejecutar
 
 ```bash
 # 1. Clonar el repositorio
@@ -61,7 +61,7 @@ DocuTrack/
 
 ---
 
-##  Estructura del BST
+## Estructura del BST
 
 Cada nodo representa una **carpeta** o un **archivo** del sistema DocuTrack:
 
@@ -72,7 +72,7 @@ Cada nodo representa una **carpeta** o un **archivo** del sistema DocuTrack:
 
 ---
 
-##  Casos de uso implementados
+## Casos de uso implementados
 
 1. **Construcción** — inserción de 14 nodos iniciales (carpetas y archivos)
 2. **Búsquedas** — 6 búsquedas con contador de comparaciones
@@ -83,7 +83,7 @@ Cada nodo representa una **carpeta** o un **archivo** del sistema DocuTrack:
 
 ---
 
-##  ¿Por qué el Inorden confirma el BST?
+## ¿Por qué el Inorden confirma el BST?
 
 El recorrido **Inorden** (izquierdo → raíz → derecho) visita los nodos
 en orden ascendente según la clave. Si la secuencia resultante está
@@ -97,7 +97,7 @@ para un BST.
 
 ---
 
-##  Ejemplo de salida en consola
+## Ejemplo de salida en consola
 ```
 ══════════════════════════════════════
 CASO 1 — Árbol inicial (14 nodos)
@@ -133,7 +133,7 @@ Por niveles: proyectos | contratos, reportes | ...
 Altura del árbol: 4
 ```
 
-##  Release
+## Release
 
 El commit final de entrega está etiquetado como `release-unidad1`.
 
