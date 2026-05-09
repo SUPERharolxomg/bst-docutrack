@@ -1,10 +1,10 @@
-# 📄 ArbolView.cs — Explicación detallada
+# ArbolView.cs — Explicación detallada
 
 ## ¿Qué es este archivo?
 
 Es la **pantalla del sistema**. Es la única clase que tiene permiso de escribir en la consola con `Console.Write` y `Console.WriteLine`. Recibe datos del Controller y los presenta de forma visual. No calcula nada, no toma decisiones, solo muestra.
 
-> ✅ **Regla MVC:** Si algo aparece en pantalla, pasó por aquí. Si algo se calcula, no pasó por aquí.
+> **Regla MVC:** Si algo aparece en pantalla, pasó por aquí. Si algo se calcula, no pasó por aquí.
 
 ---
 

@@ -1,10 +1,10 @@
-# 📄 ArbolController.cs — Explicación detallada
+# ArbolController.cs — Explicación detallada
 
 ## ¿Qué es este archivo?
 
 Es el **director de orquesta**. Su único trabajo es llamar a los métodos correctos en el orden correcto. No inventa lógica del árbol, no calcula nada, no imprime nada directamente. Todo lo delega: la lógica va al Model (`ArbolBinario`), la presentación va a la View (`ArbolView`).
 
-> ⚠️ **Regla MVC:** El Controller no tiene `Console.Write` ni lógica de BST. Solo coordina.
+> **Regla MVC:** El Controller no tiene `Console.Write` ni lógica de BST. Solo coordina.
 
 ---
 

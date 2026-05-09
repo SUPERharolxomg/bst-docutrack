@@ -1,10 +1,10 @@
-# 📄 ArbolBinario.cs — Explicación detallada
+# ArbolBinario.cs — Explicación detallada
 
 ## ¿Qué es este archivo?
 
 Es el **cerebro del sistema**. Contiene toda la lógica que manipula el árbol: insertar nodos, buscarlos, eliminarlos, actualizarlos, recorrerlos y medir su altura. Nada de esto se muestra en pantalla desde aquí; solo se calculan y retornan resultados.
 
-> ⚠️ Este archivo **no tiene ninguna línea de `Console`**. Todos los resultados los retorna para que el Controller los pase a la View.
+> Este archivo **no tiene ninguna línea de `Console`**. Todos los resultados los retorna para que el Controller los pase a la View.
 
 ---
 
