@@ -132,7 +132,3 @@ Postorden : archivo_2022, facturacion, contratos ...
 Por niveles: proyectos | contratos, reportes | ...
 Altura del árbol: 4
 ```
-
-```bash
-git checkout tags/release-unidad1
-```
