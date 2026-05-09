@@ -7,15 +7,12 @@ Proyecto académico — Programación III
 Universidad de Manizales · Facultad de Ciencias e Ingeniería
 
 ---
+## Integrantes y responsabilidades
 
-## Integrantes
-
-| Nombre | Responsabilidad |
-|--------|----------------|
-
----
-
-## Requisitos para ejecutar
+| Nombre | Rol | Responsabilidades |
+|---|---|---|
+| Harold David Garces Casas | Tech Lead | Arquitectura del proyecto, gestión del repositorio, Git (branches, issues, PR), revisión de clean code e integración final |
+| Luisa Fernanda Gallego Serna | Full-Stack Developer | Implementación de `Nodo.cs`, `ArbolBinario.cs`, `ArbolView.cs`, `ArbolController.cs`, `Program.cs` y documentación técnica |
 
 - [.NET SDK 8.0](https://dotnet.microsoft.com/download) o superior
 - Sistema operativo: Windows, Linux o macOS
