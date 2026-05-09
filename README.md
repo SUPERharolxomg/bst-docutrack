@@ -133,10 +133,6 @@ Por niveles: proyectos | contratos, reportes | ...
 Altura del árbol: 4
 ```
 
-## Release
-
-El commit final de entrega está etiquetado como `release-unidad1`.
-
 ```bash
 git checkout tags/release-unidad1
 ```
